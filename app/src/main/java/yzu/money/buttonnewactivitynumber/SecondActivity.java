@@ -22,7 +22,7 @@ public class SecondActivity extends AppCompatActivity {
         ll= (LinearLayout) findViewById(R.id.activity_second);
 
         Intent it = getIntent();
-        int selectedNum = it.getIntExtra("selectedNum", 0);
+        final int selectedNum = it.getIntExtra("selectedNum", 0);
 
         txtView = new TextView(this);
         txtView.setText(engNum[selectedNum]);
@@ -35,10 +35,10 @@ public class SecondActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+                setResult(selectedNum);
                 finish();
             }
         });
-        //backBtn.setOnClickListener((v));
 
     }
 }
