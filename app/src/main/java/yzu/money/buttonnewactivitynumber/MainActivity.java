@@ -1,5 +1,6 @@
 package yzu.money.buttonnewactivitynumber;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.widget.NumberPicker;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    static final int passValue = 0;
     private LinearLayout ll;
     private NumberPicker numPicker;
     private Button checkBtn;
@@ -24,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         numPicker=new NumberPicker(this);
         numPicker.setMaxValue(9);
         numPicker.setMinValue(0);
-        numPicker.setValue(1);
+        numPicker.setValue(0);
         ll.addView(numPicker);
 
         checkBtn=new Button(this);
@@ -35,6 +37,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 int value = numPicker.getValue();
+                Intent it = new Intent(MainActivity.this, SecondActivity.class);
+                it.putExtra("selectedNum", value);
+                startActivityForResult(it, passValue);
             }
         });
 
