@@ -1,5 +1,6 @@
 package yzu.money.buttonnewactivitynumber;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +12,7 @@ public class SecondActivity extends AppCompatActivity {
     private LinearLayout ll;
     private TextView txtView;
     private Button backBtn;
+    String engNum[]={"Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,8 +21,11 @@ public class SecondActivity extends AppCompatActivity {
 
         ll= (LinearLayout) findViewById(R.id.activity_second);
 
+        Intent it = getIntent();
+        int selectedNum = it.getIntExtra("selectedNum", 0);
+
         txtView = new TextView(this);
-        //if(se)
+        txtView.setText(engNum[selectedNum]);
         ll.addView(txtView);
 
         backBtn = new Button(this);
