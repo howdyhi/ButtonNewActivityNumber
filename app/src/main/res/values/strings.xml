@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">ButtonNewActivity Number</string>
     <string name="checkBtn_name">確認</string>
+    <string name="backBtn_name">返回</string>
 </resources>
