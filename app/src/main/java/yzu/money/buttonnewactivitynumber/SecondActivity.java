@@ -26,6 +26,8 @@ public class SecondActivity extends AppCompatActivity {
 
         txtView = new TextView(this);
         txtView.setText(engNum[selectedNum]);
+        txtView.setTextSize(50);
+        txtView.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
         ll.addView(txtView);
 
         backBtn = new Button(this);

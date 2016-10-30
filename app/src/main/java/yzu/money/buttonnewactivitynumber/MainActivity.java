@@ -52,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
         txtView=new TextView(this);
+        txtView.setTextSize(100);
+        txtView.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
         ll.addView(txtView);
 
 
