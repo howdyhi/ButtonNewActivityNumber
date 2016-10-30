@@ -15,6 +15,14 @@ public class MainActivity extends AppCompatActivity {
     private NumberPicker numPicker;
     private Button checkBtn;
     private TextView txtView;
+    String chineseNum[]={"零", "壹", "貳", "參", "肆", "伍", "陸", "柒", "捌", "玖"};
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode==passValue)
+            txtView.setText(chineseNum[resultCode]);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
