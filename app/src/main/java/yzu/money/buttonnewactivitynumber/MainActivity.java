@@ -43,6 +43,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        txtView=new TextView(this);
+        ll.addView(txtView);
+
 
     }
 }
